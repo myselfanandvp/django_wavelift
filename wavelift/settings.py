@@ -200,12 +200,12 @@ WSGI_APPLICATION = 'wavelift.wsgi.application'
 
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # DATABASES={}
@@ -215,16 +215,16 @@ DATABASES = {
 
 # DATABASES['default']=dj_database_url.parse(db_internal_url)
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': os.getenv('db_name'),
-#         'USER': os.getenv('db_user'),
-#         'PASSWORD':os.getenv('db_password'),
-#         'HOST': 'localhost',  # or your DB host
-#         'PORT': '5432',       # default PostgreSQL port
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('db_name'),
+        'USER': os.getenv('db_user'),
+        'PASSWORD':os.getenv('db_password'),
+        'HOST': 'localhost',  # or your DB host
+        'PORT': '5432',       # default PostgreSQL port
+    }
+}
 
 # DATABASES = {
 #     'default': dj_database_url.parse(

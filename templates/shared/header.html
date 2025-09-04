@@ -324,11 +324,12 @@
 <nav class=" mt-16 bg-white text-sm font-semibold shadow-md rounded-sm px-4 py-1 hidden lg:flex" aria-label="Breadcrumb">
     <ol class="inline-flex items-center space-x-2 md:space-x-3 rtl:space-x-reverse">
         {% for crumb in breadcrumbs %}
-            {% if crumb.position and crumb.url and crumb.resolved %}
+      
+            {% if crumb.position == 1 or crumb.position == 3 and crumb.url and crumb.resolved %}
                 <li class="inline-flex items-center">
-                    <p  class="text-blue-400 hover:text-blue-900 hover:underline hover:scale-105 transition-all duration-200 ease-in-out">
+                    <a href="{{crumb.url}}"  class="text-blue-400 hover:text-blue-900 hover:underline hover:scale-105 transition-all duration-200 ease-in-out">
                         {{ crumb.name }}
-                    </p>
+                    </a>
                     <span class="mx-2 text-gray-300">/</span>
                 </li>
             {% endif %}
