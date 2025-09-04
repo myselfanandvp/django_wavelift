@@ -98,9 +98,9 @@ INSTALLED_APPS = [
 # ]
 
 
-ALLOWED_HOSTS=[]
+ALLOWED_HOSTS=["wavelift.onrender.com"]
 
-CSRF_TRUSTED_ORIGINS=[]
+CSRF_TRUSTED_ORIGINS=["wavelift.onrender.com"]
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -208,23 +208,23 @@ WSGI_APPLICATION = 'wavelift.wsgi.application'
 # }
 
 
-# DATABASES={}
+DATABASES={}
 
-# db_internal_url = os.getenv('external_url')
+db_internal_url = os.getenv('external_url')
 
 
-# DATABASES['default']=dj_database_url.parse(db_internal_url)
+DATABASES['default']=dj_database_url.parse(db_internal_url)
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('db_name'),
-        'USER': os.getenv('db_user'),
-        'PASSWORD':os.getenv('db_password'),
-        'HOST': 'localhost',  # or your DB host
-        'PORT': '5432',       # default PostgreSQL port
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('db_name'),
+#         'USER': os.getenv('db_user'),
+#         'PASSWORD':os.getenv('db_password'),
+#         'HOST': 'localhost',  # or your DB host
+#         'PORT': '5432',       # default PostgreSQL port
+#     }
+# }
 
 # DATABASES = {
 #     'default': dj_database_url.parse(
