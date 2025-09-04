@@ -210,7 +210,7 @@ WSGI_APPLICATION = 'wavelift.wsgi.application'
 
 DATABASES={}
 
-db_internal_url = os.getenv('external_url')
+db_internal_url = os.getenv('internal_url')
 
 
 DATABASES['default']=dj_database_url.parse(db_internal_url)
