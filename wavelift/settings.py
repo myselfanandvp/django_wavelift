@@ -34,8 +34,8 @@ SECRET_KEY = os.getenv('django_key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = True
-# DEBUG=os.getenv('DEBUG','False').lower() == 'true'
+# DEBUG = True
+DEBUG=os.getenv('DEBUG','False').lower() == 'true'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -100,7 +100,7 @@ INSTALLED_APPS = [
 
 ALLOWED_HOSTS=["wavelift.onrender.com"]
 
-CSRF_TRUSTED_ORIGINS=["wavelift.onrender.com"]
+CSRF_TRUSTED_ORIGINS=['https://wavelift.onrender.com']
 
 AUTH_USER_MODEL = 'users.User'
 
