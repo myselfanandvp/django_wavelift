@@ -18,8 +18,6 @@ import dj_database_url
 
 load_dotenv()
 
-USE_TZ = True
-TIME_ZONE = "Asia/Kolkata" 
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -98,7 +96,7 @@ INSTALLED_APPS = [
 # ]
 
 
-ALLOWED_HOSTS=["wavelift.onrender.com"]
+ALLOWED_HOSTS=["wavelift.onrender.com",'127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS=['https://wavelift.onrender.com']
 
@@ -263,11 +261,12 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
-
 USE_I18N = True
 
 USE_TZ = True
+
+TIME_ZONE = "Asia/Kolkata" 
+
 
 
 # Static files (CSS, JavaScript, Images)
