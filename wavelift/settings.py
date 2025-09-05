@@ -32,8 +32,8 @@ SECRET_KEY = os.getenv('django_key')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# DEBUG = True
-DEBUG=os.getenv('DEBUG','False').lower() == 'true'
+DEBUG = True
+# DEBUG=os.getenv('DEBUG','False').lower() == 'true'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -98,7 +98,7 @@ INSTALLED_APPS = [
 
 ALLOWED_HOSTS=["wavelift.onrender.com",'127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS=['https://wavelift.onrender.com']
+CSRF_TRUSTED_ORIGINS=['https://wavelift.onrender.com','http://127.0.0.1:8000',]
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -198,20 +198,20 @@ WSGI_APPLICATION = 'wavelift.wsgi.application'
 
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
-DATABASES={}
+# DATABASES={}
 
-db_internal_url = os.getenv('internal_url')
+# db_internal_url = os.getenv('internal_url')
 
 
-DATABASES['default']=dj_database_url.parse(db_internal_url)
+# DATABASES['default']=dj_database_url.parse(db_internal_url)
 
 # DATABASES = {
 #     'default': {
