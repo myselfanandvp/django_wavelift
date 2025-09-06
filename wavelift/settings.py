@@ -96,9 +96,9 @@ INSTALLED_APPS = [
 # ]
 
 
-ALLOWED_HOSTS=['127.0.0.1']
+ALLOWED_HOSTS=['127.0.0.1','wavelift.dpdns.org']
 
-CSRF_TRUSTED_ORIGINS=['http://127.0.0.1:8000',]
+CSRF_TRUSTED_ORIGINS=['http://127.0.0.1:8000','https://wavelift.dpdns.org']
 
 AUTH_USER_MODEL = 'users.User'
 
