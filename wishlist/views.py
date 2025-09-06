@@ -27,7 +27,7 @@ class AddToWishList(LoginRequiredMixin,View):
         color_id=request.POST.get('color')
         colors=ProductColor.objects.filter(id=color_id).first()
         product = get_object_or_404(Product,id=id)
-        if WishList.objects.filter(product__id=product.id,color=colors).exists():
+        if WishList.objects.filter(product__id=product.id,color=colors,user=request.user).exists():
              return JsonResponse({'status': 'error', 'message': 'Product is already in wishlist'})
         WishList.objects.create(user=request.user,product=product,color=colors)
         return JsonResponse({'status': 'success', 'message': 'Product added to the wishlist'})
