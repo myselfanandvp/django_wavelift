@@ -493,7 +493,7 @@ fetch('{%url "add_new_address_url"%}',{
     position: "center",
     icon: data.status,
     title: "Address Added",
-   text: "Phone number is not valid!",
+    text:data.message,
     showConfirmButton: false,
     toast: true,
     width: 'auto',
