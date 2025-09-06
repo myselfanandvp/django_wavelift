@@ -493,9 +493,7 @@ fetch('{%url "add_new_address_url"%}',{
     position: "center",
     icon: data.status,
     title: "Address Added",
-   text: data.message['alternate_phone_number'] 
-            ? data.message['alternate_phone_number'][0] 
-            : data.message,   // fallback if it's not a dict
+   text: "Phone number is not valid!",  // fallback if it's not a dict
     showConfirmButton: false,
     toast: true,
     width: 'auto',
