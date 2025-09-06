@@ -472,7 +472,7 @@ class AddNewAddress(View):
             return JsonResponse(message, status=201)
             
         except Exception as e:      
-            return JsonResponse({"status":"error","message": str(e)}, status=400)
+            return JsonResponse({"status":"error","message": "Phone number should be a valid one"}, status=400)
         
         
 
